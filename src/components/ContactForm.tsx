@@ -153,7 +153,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-primary disabled:bg-primary-light/70 disabled:cursor-not-allowed text-white hover:bg-primary-light py-4 rounded-xl text-sm font-semibold shadow-md hover:shadow-lg transition-all flex items-center justify-center space-x-2"
+          className="w-full bg-primary disabled:bg-primary-light/70 disabled:cursor-not-allowed text-white hover:bg-primary-light py-4 rounded-xl text-sm font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:scale-[1.01] active:scale-[0.98] transition-all duration-300 flex items-center justify-center space-x-2 group"
         >
           {isSubmitting ? (
             <>
@@ -165,7 +165,7 @@ export default function ContactForm() {
             </>
           ) : (
             <>
-              <Send className="w-4 h-4" />
+              <Send className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               <span>Send Enquiry</span>
             </>
           )}

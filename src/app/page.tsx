@@ -15,6 +15,7 @@ import {
   Car,
 } from "lucide-react";
 import MapEmbed from "@/components/MapEmbed";
+import RippleEffect from "@/components/RippleEffect";
 
 function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string }) {
   const [count, setCount] = useState(0);
@@ -97,7 +98,7 @@ export default function Home() {
     {
       id: "size1",
       dimensions: "1 x 1 ft",
-      useCase: "Compact warning signs & small utility poles.",
+      useCase: "Ideal for wanted ads, warnings, and compact local listings.",
       popularity: "Compact",
       width: 48,
       height: 48,
@@ -106,7 +107,7 @@ export default function Home() {
     {
       id: "size2",
       dimensions: "1 x 1.5 ft",
-      useCase: "Standard street pole marketing format.",
+      useCase: "Standard size for no parking signs, small street pole advertisements, and gate boards.",
       popularity: "Standard",
       width: 72,
       height: 48,
@@ -115,7 +116,7 @@ export default function Home() {
     {
       id: "size2_5",
       dimensions: "1.5 x 2 ft",
-      useCase: "Popular real estate plot banners and window displays.",
+      useCase: "Perfect for real estate plot banners, standard advertising boards, and window promotions.",
       popularity: "Popular Choice",
       width: 72,
       height: 96,
@@ -124,7 +125,7 @@ export default function Home() {
     {
       id: "size3",
       dimensions: "2 x 2 ft",
-      useCase: "Highly visible square format perfect for No Parking announcements.",
+      useCase: "Highly popular format among schools, colleges, and educational academies for admissions campaigns.",
       popularity: "Popular Choice",
       width: 96,
       height: 96,
@@ -133,7 +134,7 @@ export default function Home() {
     {
       id: "size4",
       dimensions: "2 x 3 ft",
-      useCase: "Large layout format ideal for real estate plot listings and roadside directions.",
+      useCase: "Large layout format designed for large advertising campaigns, event directions, and roadside setups.",
       popularity: "High Visibility",
       width: 96,
       height: 144,
@@ -142,7 +143,7 @@ export default function Home() {
     {
       id: "size5",
       dimensions: "2 x 4 ft",
-      useCase: "Extra wide format designed for retail banners and grand gates.",
+      useCase: "Grand openings, commercial shop gate banners, and mega promotional announcements.",
       popularity: "Large Format",
       width: 96,
       height: 192,
@@ -384,18 +385,18 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
               <Link
                 href="/contact"
-                className="flex items-center justify-center space-x-2 bg-primary text-white hover:bg-primary-light px-8 py-4 rounded-full text-base font-semibold shadow-lg hover:shadow-xl transition-all w-full sm:w-auto"
+                className="flex items-center justify-center space-x-2 bg-primary text-white hover:bg-primary-light px-8 py-4 rounded-full text-base font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.97] transition-all duration-300 w-full sm:w-auto group"
               >
                 <span>Get Quote</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <a
                 href="https://wa.me/919345632103?text=Hi%20Sree%20Balaji%20Advertising%2C%20I'm%20interested%20in%20your%20printing%20services."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center space-x-2 bg-white text-gray-700 hover:text-primary border border-gray-200 hover:border-primary/20 px-8 py-4 rounded-full text-base font-semibold shadow-sm transition-all w-full sm:w-auto"
+                className="flex items-center justify-center space-x-2 bg-white text-gray-700 hover:text-primary border border-gray-200 hover:border-primary/20 px-8 py-4 rounded-full text-base font-semibold shadow-sm hover:shadow hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.97] transition-all duration-300 w-full sm:w-auto group"
               >
-                <MessageSquare className="w-5 h-5 text-emerald-500 fill-emerald-50" />
+                <MessageSquare className="w-5 h-5 text-emerald-500 fill-emerald-50 hover-bounce" />
                 <span>Chat on WhatsApp</span>
               </a>
             </div>
@@ -693,23 +694,25 @@ export default function Home() {
                   return (
                     <div key={s.id} className="relative mt-2.5">
                       {isPopular && (
-                        <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-[8px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow-md tracking-wider z-10 flex items-center space-x-1.5 whitespace-nowrap border border-white">
+                        <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-[8px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow-md tracking-wider z-10 flex items-center space-x-1.5 whitespace-nowrap border border-white animate-pulse-gentle overflow-hidden">
+                          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-shimmer-sweep" />
                           <span className="relative flex h-1.5 w-1.5">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
                           </span>
-                          <span>Popular</span>
+                          <span className="relative z-10">Popular</span>
                         </span>
                       )}
                       <button
                         onClick={() => setSelectedSize(s.id)}
-                        className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 relative ${
+                        className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 relative overflow-hidden ${
                           selectedSize === s.id
                             ? "bg-primary text-white shadow-md scale-105"
                             : "bg-white text-gray-600 border border-gray-100 hover:bg-gray-100 hover:scale-[1.02]"
                         } ${isPopular ? "border-amber-400 shadow-[0_0_8px_rgba(245,158,11,0.25)]" : ""}`}
                       >
-                        {s.dimensions}
+                        <RippleEffect color={selectedSize === s.id ? "rgba(255, 255, 255, 0.65)" : "rgba(15, 61, 36, 0.25)"} />
+                        <span className="relative z-10">{s.dimensions}</span>
                       </button>
                     </div>
                   );
@@ -731,9 +734,9 @@ export default function Home() {
                   </div>
 
                   {/* Visual proportions mockup */}
-                  <div className="w-full h-56 bg-mint rounded-2xl border border-primary/10 flex items-center justify-center relative">
+                  <div className="w-full h-56 bg-mint rounded-2xl border border-primary/10 flex items-center justify-center relative overflow-hidden">
                     <div 
-                      className="border border-dashed border-primary/40 rounded-xl flex items-center justify-center text-center shadow-inner"
+                      className="border border-dashed border-primary/40 rounded-xl flex items-center justify-center text-center shadow-inner transition-all duration-500 ease-out bg-white/50"
                       style={{ width: `${currentSizeObj.width}px`, height: `${currentSizeObj.height}px` }}
                     >
                       <span className="text-[10px] font-bold text-primary font-mono p-1">
@@ -744,7 +747,7 @@ export default function Home() {
                 </div>
 
                 {/* Real-world Preview Mockup Card */}
-                <div className="bg-white border border-gray-100 rounded-3xl p-6 flex flex-col justify-between">
+                <div className="bg-white border border-gray-100 rounded-3xl p-6 flex flex-col justify-between hover:shadow-md transition-shadow duration-300">
                   <div>
                     <span className="text-[10px] font-bold text-gold bg-amber-50 border border-gold/10 px-2.5 py-1 rounded-md uppercase tracking-wider">
                       Preview in Action
@@ -759,7 +762,8 @@ export default function Home() {
 
                   {/* Preview image window */}
                   <div 
-                    className="w-full h-64 rounded-2xl border border-gray-100 overflow-hidden bg-contain bg-no-repeat bg-gray-50 bg-center relative shadow-sm"
+                    key={selectedSize}
+                    className="w-full h-64 rounded-2xl border border-gray-100 overflow-hidden bg-contain bg-no-repeat bg-gray-50 bg-center relative shadow-sm animate-scale-up"
                     style={{ backgroundImage: `url(${currentSizeObj.img})` }}
                   >
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

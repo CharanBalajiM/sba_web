@@ -115,3 +115,181 @@ html {
 .animate-scale-up {
   animation: scaleUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-gentle {
+  0%, 100% {
+    scale: 1;
+    translate: -50% 0;
+  }
+  50% {
+    scale: 1.06;
+    translate: -50% -2px;
+  }
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  40%, 100% {
+    transform: translateX(150%) skewX(-20deg);
+  }
+}
+
+.animate-pulse-gentle {
+  animation: pulse-gentle 2.5s ease-in-out infinite;
+}
+
+.animate-shimmer-sweep {
+  animation: shimmer-sweep 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.glass-button-green {
+  background: linear-gradient(135deg, rgba(230, 247, 238, 0.8) 0%, rgba(15, 61, 36, 0.2) 100%);
+  border: 1px solid rgba(15, 61, 36, 0.22);
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    inset 0 -1px 0 rgba(15, 61, 36, 0.15),
+    0 8px 20px -6px rgba(15, 61, 36, 0.18);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-button-green:hover {
+  background: linear-gradient(135deg, rgba(230, 247, 238, 0.92) 0%, rgba(15, 61, 36, 0.3) 100%);
+  border: 1px solid rgba(15, 61, 36, 0.28);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    inset 0 -1px 0 rgba(15, 61, 36, 0.25),
+    0 12px 24px -8px rgba(15, 61, 36, 0.24);
+}
+
+@keyframes border-beam {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -260;
+  }
+}
+
+.animate-border-beam {
+  animation: border-beam 3.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes rainbow-shimmer {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  35% {
+    transform: translateX(150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(150%) skewX(-20deg);
+  }
+}
+
+.animate-rainbow-shimmer {
+  animation: rainbow-shimmer 5s linear infinite;
+}
+
+.rainbow-shimmer-bg {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 35%,
+    rgba(255, 0, 0, 0.14) 38%,
+    rgba(255, 127, 0, 0.14) 43%,
+    rgba(255, 220, 0, 0.14) 48%,
+    rgba(0, 220, 80, 0.14) 53%,
+    rgba(0, 140, 255, 0.14) 58%,
+    rgba(170, 0, 255, 0.14) 63%,
+    rgba(255, 255, 255, 0) 66%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+@keyframes hover-shimmer {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+  }
+  100% {
+    transform: translateX(150%) skewX(-25deg);
+  }
+}
+
+.group:hover .glass-shimmer {
+  animation: hover-shimmer 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes shimmer-loop {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  35% {
+    transform: translateX(150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(150%) skewX(-20deg);
+  }
+}
+
+.animate-shimmer-loop {
+  animation: shimmer-loop 4s linear infinite;
+}
+
+@keyframes icon-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.group:hover .hover-bounce {
+  animation: icon-bounce 0.6s ease-in-out;
+}
+
+@keyframes phone-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  15% { transform: rotate(-15deg); }
+  30% { transform: rotate(15deg); }
+  45% { transform: rotate(-10deg); }
+  60% { transform: rotate(10deg); }
+  75% { transform: rotate(-5deg); }
+  90% { transform: rotate(5deg); }
+}
+
+.group:hover .hover-wiggle {
+  animation: phone-wiggle 0.6s ease-in-out;
+}
+
+
+
