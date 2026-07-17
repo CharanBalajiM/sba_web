@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight, Printer, CheckCircle, HelpCircle, MessageSquare, Maximize2 } from "lucide-react";
+import { ArrowRight, Printer, CheckCircle, HelpCircle, MessageSquare, Maximize2, Info } from "lucide-react";
 import RippleEffect from "@/components/RippleEffect";
 
 export default function SunpackSheetPrinting() {
@@ -286,6 +286,19 @@ export default function SunpackSheetPrinting() {
               </div>
             );
           })}
+        </div>
+
+        {/* Pricing Disclaimer Callout */}
+        <div className="bg-amber-50/50 border border-amber-200/50 rounded-2xl p-6 mb-12 flex items-start gap-4 shadow-xs">
+          <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-600 shrink-0 mt-0.5 animate-pulse-gentle">
+            <Info className="w-5.5 h-5.5" />
+          </div>
+          <div>
+            <h3 className="text-xs font-bold text-gray-900 font-sans">Why We Don&apos;t Show Fixed Prices</h3>
+            <p className="text-[11px] sm:text-xs text-gray-600 leading-relaxed mt-1.5">
+              Sunpack sheet printing costs vary significantly based on the sheet dimensions (ranging from 1x1 ft up to 2x4 ft), choice of printing method (high-volume screen vs. digital), and overall print quantity. We customize every quote to ensure you receive the lowest possible wholesale rates. Contact us to get your customized quote within minutes!
+            </p>
+          </div>
         </div>
 
         {/* CTAs */}

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Printer, Car, ArrowRight, Sparkles, ShieldCheck, Hammer } from "lucide-react";
+import { Printer, Car, ArrowRight, Sparkles, ShieldCheck, Hammer, Info } from "lucide-react";
 
 export default function Services() {
   const [mounted, setMounted] = useState(false);
@@ -84,6 +84,21 @@ export default function Services() {
               </div>
             );
           })}
+        </div>
+        
+        {/* Pricing Disclaimer Callout */}
+        <div className="bg-amber-50/50 border border-amber-200/50 rounded-3xl p-6 md:p-8 mb-16 flex flex-col md:flex-row items-start gap-4 max-w-4xl mx-auto shadow-xs">
+          <div className="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-600 shrink-0 mt-0.5">
+            <Info className="w-6 h-6" />
+          </div>
+          <div>
+            <h3 className="text-base font-bold text-gray-900 font-sans">Why Custom Quotes? Get Our Best-Price Guarantee</h3>
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mt-2">
+              Every branding project is unique. Pricing varies based on the size of the sheets, printing method (screen vs. high-resolution digital), and order volume. 
+              We don&apos;t display fixed prices because we calculate custom, bulk discounts for each order to ensure you receive the lowest wholesale rates. 
+              Contact us for a quick, obligation-free quote tailored to your budget!
+            </p>
+          </div>
         </div>
 
         {/* Process Section */}
