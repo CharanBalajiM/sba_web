@@ -3,6 +3,7 @@
 // Build Trigger: 2026-07-17T15:25:00+05:30
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Printer,
   Shield,
@@ -633,34 +634,56 @@ export default function Home() {
             </div>
             
             {/* Filter Toggle Buttons */}
-            <div className="flex gap-2 mt-6 md:mt-0 bg-white p-1.5 rounded-full border border-gray-200 shadow-sm shrink-0">
+            <div className="flex gap-2 mt-6 md:mt-0 bg-white p-1.5 rounded-full border border-gray-200 shadow-sm shrink-0 relative">
               <button
                 onClick={() => setShowcaseTab("sunpack")}
-                className={`px-6 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all cursor-pointer ${
+                className={`px-6 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all cursor-pointer relative z-10 ${
                   showcaseTab === "sunpack"
-                    ? "bg-primary text-white shadow-sm"
+                    ? "text-white"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
+                {showcaseTab === "sunpack" && (
+                  <motion.span
+                    layoutId="activeShowcaseTab"
+                    className="absolute inset-0 bg-primary rounded-full -z-10 shadow-sm"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
                 Sunpack Sheets
               </button>
               <button
                 onClick={() => setShowcaseTab("autotops")}
-                className={`px-6 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all cursor-pointer ${
+                className={`px-6 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all cursor-pointer relative z-10 ${
                   showcaseTab === "autotops"
-                    ? "bg-primary text-white shadow-sm"
+                    ? "text-white"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
+                {showcaseTab === "autotops" && (
+                  <motion.span
+                    layoutId="activeShowcaseTab"
+                    className="absolute inset-0 bg-primary rounded-full -z-10 shadow-sm"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
                 Auto Tops
               </button>
             </div>
           </div>
 
           {/* Conditional Rendering Grid */}
-          {showcaseTab === "autotops" ? (
-            /* Auto Tops Grid */
-            <div key="showcase-autotops" className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <AnimatePresence mode="wait">
+            {showcaseTab === "autotops" ? (
+              /* Auto Tops Grid */
+              <motion.div
+                key="showcase-autotops"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.2 }}
+                className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+              >
               {autoTopProjects.map((item, i) => (
                 <div
                   key={i}
@@ -685,10 +708,17 @@ export default function Home() {
                   </div>
                 </div>
               ))}
-            </div>
-          ) : (
-            /* Sunpack Sheets Interactive Showcase */
-            <div key="showcase-sunpack" className="max-w-6xl mx-auto">
+              </motion.div>
+            ) : (
+              /* Sunpack Sheets Interactive Showcase */
+              <motion.div
+                key="showcase-sunpack"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.2 }}
+                className="max-w-6xl mx-auto"
+              >
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {sunpackSizes.map((s) => {
                   const isPopular = s.id === "size2_5" || s.id === "size3";
@@ -776,8 +806,9 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
-          )}
+              </motion.div>
+            )}
+          </AnimatePresence>
 
 
         </div>
