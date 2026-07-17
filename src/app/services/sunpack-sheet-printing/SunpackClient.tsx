@@ -127,7 +127,7 @@ export default function SunpackSheetPrinting() {
         <p className="text-base text-gray-600 leading-relaxed mb-8">
           Looking for a cost-effective way to execute mass outdoor local marketing promotions across Tamil Nadu? 
           <strong> Sree Balaji Advertising</strong> provides premium, durable Sunpack sheet printing solutions established since 1999. 
-          Specializing in **school and college admissions campaigns, educational coaching announcements, and campus signages**, our coroplast signs are lightweight, waterproof, and extremely easy to install.
+          Specializing in **school and college admissions campaigns, educational coaching announcements, and localized outdoor announcements**, our coroplast signs are lightweight, waterproof, and extremely easy to install.
         </p>
 
         {/* Callout Box */}

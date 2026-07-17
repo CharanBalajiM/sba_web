@@ -19,19 +19,24 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Sree Balaji Advertising | Premium Sign Boards & Printing Erode",
+    default: "Sree Balaji Advertising | Sunpack Sheet & Auto Top Printing Erode",
     template: "%s | Sree Balaji Advertising",
   },
   description:
-    "Erode's premier printing and signage company since 1999. Specializing in Sunpack sheet printing, Auto top printing, and custom sign boards for schools, colleges, and hospitals.",
+    "Erode's premier printing company since 1999. Specializing in high-quality Sunpack sheet printing and Auto top printing across Tamil Nadu.",
   metadataBase: new URL("https://sreebalajiadvertising.co.in"),
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/icon.png",
+  },
   openGraph: {
-    title: "Sree Balaji Advertising | Premium Sign Boards & Printing Erode",
+    title: "Sree Balaji Advertising | Sunpack Sheet & Auto Top Printing Erode",
     description:
-      "Leading signage and printing agency in Tamil Nadu. High quality custom design boards, banner printing, and auto branding since 1999.",
+      "Leading printing agency in Tamil Nadu. High quality custom Sunpack sheet printing and Auto top branding since 1999.",
     url: "https://sreebalajiadvertising.co.in",
     siteName: "Sree Balaji Advertising",
     locale: "en_IN",
