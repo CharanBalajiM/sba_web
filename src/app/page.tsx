@@ -826,7 +826,7 @@ export default function Home() {
                 Why Businesses Trust Sree Balaji Advertising
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-8">
-                Since 1999, we have stayed committed to delivering top-quality bulk prints. We assist businesses, schools, and hospitals in setting up high-visibility promotions across Tamil Nadu.
+                Since 1999, we have stayed committed to delivering top-quality custom prints. We assist businesses, schools, and hospitals in setting up high-visibility promotions across Tamil Nadu.
               </p>
 
               <div className="space-y-6">

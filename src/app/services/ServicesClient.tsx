@@ -95,7 +95,7 @@ export default function Services() {
             <h3 className="text-base font-bold text-gray-900 font-sans">Why Custom Quotes? Get Our Best-Price Guarantee</h3>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mt-2">
               Every branding project is unique. Pricing varies based on the size of the sheets, printing method (screen vs. high-resolution digital), and order volume. 
-              We don&apos;t display fixed prices because we calculate custom, bulk discounts for each order to ensure you receive the lowest wholesale rates. 
+              We don&apos;t display fixed prices because we calculate custom pricing for each order to ensure you receive the lowest rates. 
               Contact us for a quick, obligation-free quote tailored to your budget!
             </p>
           </div>

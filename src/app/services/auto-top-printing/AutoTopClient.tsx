@@ -156,7 +156,7 @@ export default function AutoTopPrinting() {
           <div>
             <h3 className="text-xs font-bold text-gray-900 font-sans">Why We Don&apos;t Show Fixed Prices</h3>
             <p className="text-[11px] sm:text-xs text-gray-600 leading-relaxed mt-1.5">
-              Auto top branding costs depend entirely on the number of vehicles, region of deployment, and required print volume. We customize every quote to ensure you receive the maximum possible bulk discount and the best local rates. Contact us to get your customized quote within minutes!
+              Auto top branding costs depend entirely on the number of vehicles, region of deployment, and required print volume. We customize every quote to ensure you receive the maximum possible volume discount and the best local rates. Contact us to get your customized quote within minutes!
             </p>
           </div>
         </div>

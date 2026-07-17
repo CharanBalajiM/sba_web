@@ -87,7 +87,7 @@ export default function SunpackSheetPrinting() {
   const faqs = [
     {
       q: "What is the minimum order quantity (MOQ) for Sunpack printing?",
-      a: "For custom screen-printed designs, our standard minimum order is 500 sheets to offer you the best bulk cost efficiency.",
+      a: "For custom screen-printed designs, our standard minimum order is 500 sheets to offer you the best cost efficiency.",
     },
     {
       q: "How long do Sunpack sheet prints last outdoors?",
@@ -305,7 +305,7 @@ export default function SunpackSheetPrinting() {
         <div className="bg-emerald-950 text-white rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between shadow-xl">
           <div className="mb-6 md:mb-0 text-center md:text-left">
             <h3 className="text-xl font-bold text-white mb-2">Need a Custom Print Quote?</h3>
-            <p className="text-xs text-gray-300">Talk to our experts for bulk discounts and size selection.</p>
+            <p className="text-xs text-gray-300">Talk to our experts for custom volume pricing and size selection.</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <a

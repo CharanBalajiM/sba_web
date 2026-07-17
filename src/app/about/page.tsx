@@ -4,7 +4,7 @@ import { Award, ShieldCheck, Zap, History, Target } from "lucide-react";
 export const metadata: Metadata = {
   title: "About Us | 25+ Years of Printing Experience",
   description:
-    "Discover Sree Balaji Advertising, established in 1999. Erode's leading specialist in bulk Sunpack sheet printing and Auto Top branding.",
+    "Discover Sree Balaji Advertising, established in 1999. Erode's leading specialist in Sunpack sheet printing and Auto Top branding.",
   alternates: {
     canonical: "/about",
   },
@@ -67,7 +67,7 @@ export default function About() {
             <div className="z-10">
               <h3 className="text-4xl font-extrabold text-white mb-2">1999</h3>
               <p className="text-xs text-gray-300 font-medium uppercase tracking-wide">
-                Founded in Tamil Nadu • Over 2.7 Decades of Bulk Print Operations
+                Founded in Tamil Nadu • Over 2.7 Decades of Professional Print Operations
               </p>
             </div>
           </div>
