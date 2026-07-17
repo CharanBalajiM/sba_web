@@ -25,7 +25,7 @@ export default function Footer() {
               <img 
                 src="/logo-v2.png" 
                 alt="SBA Logo" 
-                className="h-10 w-auto object-contain brightness-0 invert"
+                className="h-10 w-auto object-contain rounded"
               />
               <div className="flex flex-col">
                 <span className="text-lg font-bold tracking-tight text-white leading-none">
