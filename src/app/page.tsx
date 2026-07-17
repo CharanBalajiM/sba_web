@@ -79,7 +79,7 @@ export default function Home() {
     {
       title: "Erode Arts and Science College Promotion",
       desc: "Rear-view high-visibility Auto Top print displaying institutional admissions copy.",
-      img: "/auto-top-mockup.png",
+      img: "/erode-auto-mockup-v2.png",
       tag: "Auto Top Branding",
     },
     {
