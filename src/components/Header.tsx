@@ -52,7 +52,7 @@ export default function Header() {
           {/* Logo / Brand Name */}
           <Link href="/" className="flex items-center space-x-3 group">
             <img 
-              src="/logo.png" 
+              src="/logo-v2.png" 
               alt="SBA Logo" 
               className="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />

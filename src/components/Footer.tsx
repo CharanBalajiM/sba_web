@@ -23,7 +23,7 @@ export default function Footer() {
           <div className="flex flex-col space-y-4">
             <Link href="/" className="flex items-center space-x-3">
               <img 
-                src="/logo.png" 
+                src="/logo-v2.png" 
                 alt="SBA Logo" 
                 className="h-10 w-auto object-contain brightness-0 invert"
               />
