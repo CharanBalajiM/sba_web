@@ -87,7 +87,7 @@ export default function SunpackSheetPrinting() {
   const faqs = [
     {
       q: "What is the minimum order quantity (MOQ) for Sunpack printing?",
-      a: "For screen-printed custom designs, our standard minimum order is 100 sheets to offer you the best cost efficiency. For digital prints, we can do smaller volumes.",
+      a: "For custom screen-printed designs, our standard minimum order is 500 sheets to offer you the best bulk cost efficiency.",
     },
     {
       q: "How long do Sunpack sheet prints last outdoors?",
@@ -95,7 +95,7 @@ export default function SunpackSheetPrinting() {
     },
     {
       q: "What sizes are most popular for street pole advertising?",
-      a: "The most popular and cost-effective size is 12x18 inches (1x1.5 feet), which fits perfectly on utility poles and street fences without blocking view.",
+      a: "The most popular and high-impact sizes are 1.5x2 ft (18x24 inches) and 2x2 ft (24x24 inches). They are highly popular among educational institutions for school and college admission campaigns.",
     },
   ];
 
