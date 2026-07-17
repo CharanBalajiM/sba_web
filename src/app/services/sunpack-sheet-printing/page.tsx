@@ -22,7 +22,7 @@ export default function SunpackSheetPrinting() {
       popularity: "Compact",
       width: 48,
       height: 48,
-      img: "/size-1x1.png",
+      img: "/size-1x1-v2.png",
     },
     {
       id: "size2",
