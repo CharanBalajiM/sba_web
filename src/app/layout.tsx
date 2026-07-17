@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   description:
     "Erode's premier printing and signage company since 1999. Specializing in Sunpack sheet printing, Auto top printing, and custom sign boards for schools, colleges, and hospitals.",
-  metadataBase: new URL("https://sreebalajiadvertising.com"),
+  metadataBase: new URL("https://sreebalajiadvertising.co.in"),
   alternates: {
     canonical: "/",
   },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "Sree Balaji Advertising | Premium Sign Boards & Printing Erode",
     description:
       "Leading signage and printing agency in Tamil Nadu. High quality custom design boards, banner printing, and auto branding since 1999.",
-    url: "https://sreebalajiadvertising.com",
+    url: "https://sreebalajiadvertising.co.in",
     siteName: "Sree Balaji Advertising",
     locale: "en_IN",
     type: "website",
@@ -59,9 +59,9 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Sree Balaji Advertising",
-    "image": "https://sreebalajiadvertising.com/logo.png",
-    "@id": "https://sreebalajiadvertising.com/#localbusiness",
-    "url": "https://sreebalajiadvertising.com",
+    "image": "https://sreebalajiadvertising.co.in/logo.png",
+    "@id": "https://sreebalajiadvertising.co.in/#localbusiness",
+    "url": "https://sreebalajiadvertising.co.in",
     "telephone": "+919345632103",
     "priceRange": "$$",
     "address": {
