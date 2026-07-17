@@ -70,7 +70,7 @@ export default function Home() {
       path: "/services/auto-top-printing",
       icon: Car,
       accent: "bg-emerald-50 text-primary",
-      bgImage: "/auto-top-card-bg.png",
+      bgImage: "/auto-top-card-bg-v2.png",
     },
   ];
 
