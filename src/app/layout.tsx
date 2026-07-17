@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "Erode's premier printing company since 1999. Specializing in high-quality Sunpack sheet printing and Auto top printing across Tamil Nadu.",
   metadataBase: new URL("https://sreebalajiadvertising.co.in"),
   alternates: {
-    canonical: "/",
+    canonical: "https://sreebalajiadvertising.co.in",
   },
   icons: {
     icon: "/favicon.ico",

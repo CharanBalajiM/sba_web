@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Get in touch with Sree Balaji Advertising in Erode. Contact us at +91 93456 32103 or email sreebalajiadvertising@gmail.com for Sunpack sheet printing and Auto Top branding.",
   alternates: {
-    canonical: "/contact",
+    canonical: "https://sreebalajiadvertising.co.in/contact",
   },
 };
 

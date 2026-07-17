@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Direct-on-rexine Auto Top printing & custom cover-replacement branding services across Tamil Nadu. High-visibility mobile transit advertising since 1999.",
   alternates: {
-    canonical: "/services/auto-top-printing",
+    canonical: "https://sreebalajiadvertising.co.in/services/auto-top-printing",
   },
 };
 

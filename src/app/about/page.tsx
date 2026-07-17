@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Discover Sree Balaji Advertising, established in 1999. Erode's leading specialist in Sunpack sheet printing and Auto Top branding.",
   alternates: {
-    canonical: "/about",
+    canonical: "https://sreebalajiadvertising.co.in/about",
   },
 };
 

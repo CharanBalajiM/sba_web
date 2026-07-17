@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Weatherproof coroplast sheet advertising prints for mass outdoor local marketing campaigns in Erode and Tamil Nadu. Standard pole-board sizes with metal eyelets.",
   alternates: {
-    canonical: "/services/sunpack-sheet-printing",
+    canonical: "https://sreebalajiadvertising.co.in/services/sunpack-sheet-printing",
   },
 };
 
