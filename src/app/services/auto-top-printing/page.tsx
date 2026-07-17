@@ -12,12 +12,12 @@ export default function AutoTopPrinting() {
   }, []);
 
   const specs = [
-    "Premium thick heavy-duty flex/canvas tops that prevent tearing",
-    "Eco-solvent / UV stable inks to avoid fading under hot sun and monsoon rains",
-    "Precise custom stitching with secure ropes for tight Auto Top fitment",
-    "Full-back print size formats customized for standard chassis models",
-    "Over 27 years of trusted transit layout optimization since 1999",
-    "Complete end-to-end service including printing, stitching, and field mounting",
+    "Premium heavy-duty rexine auto hood covers printed directly on the material",
+    "Eco-solvent / UV stable inks that fuse with the rexine to avoid peeling or fading",
+    "Professional tailoring and stitching to replace original auto covers for a perfect, tight fit",
+    "No messy ropes or tied sheets — a seamless, premium, crease-free factory finish",
+    "Over 27 years of trusted transit advertising and vehicle branding since 1999",
+    "Complete turnkey service: dismantling old covers, custom tailoring, printing, and refitting",
   ];
 
   const faqs = [
@@ -31,7 +31,7 @@ export default function AutoTopPrinting() {
     },
     {
       q: "Do you handle the distribution and installation on local vehicles?",
-      a: "Yes, we work directly with local stands and drivers in Erode, making it easy to roll out ads across 50, 100, or 1000+ vehicles efficiently.",
+      a: "Yes, we handle everything. Our experienced crew removes the original auto hood and replaces it entirely with the newly printed and custom-tailored rexine hood. This ensures a clean, tight, wrinkle-free installation that doesn't rely on ropes or temporary tied sheets.",
     },
   ];
 
@@ -60,8 +60,8 @@ export default function AutoTopPrinting() {
 
         <p className="text-base text-gray-600 leading-relaxed mb-8">
           Looking for a moving billboard that markets your business 24/7? 
-          <strong> Sree Balaji Advertising</strong> provides premium <strong>Auto Top printing and branding services across Tamil Nadu</strong>, focusing heavily on <strong>school admission openings, college recruitment drives, and coaching institute promotions</strong>. 
-          Vehicles serve as the transit lifeline of Tamil Nadu, navigating narrow residential lanes and busy commercial streets where static billboards can&apos;t reach.
+          <strong> Sree Balaji Advertising</strong> provides premium, <strong>direct-on-rexine Auto Top printing and cover-replacement branding services across Tamil Nadu</strong>, focusing heavily on <strong>school admission openings, college recruitment drives, and coaching institute promotions</strong>. 
+          Instead of tying temporary banners or loose sheets over the vehicle, we print your design directly onto auto-grade rexine material and tailor a complete replacement hood, ensuring a seamless, premium, and weather-resistant finish.
         </p>
 
         {/* Callout */}
@@ -98,16 +98,16 @@ export default function AutoTopPrinting() {
           </div>
           <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:bg-white hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300">
             <span className="text-xs font-bold text-primary bg-mint px-2.5 py-1 rounded-full">Step 2</span>
-            <h3 className="text-sm font-bold text-gray-900 mt-4 mb-2">UV Printing &amp; Stitching</h3>
+            <h3 className="text-sm font-bold text-gray-900 mt-4 mb-2">Direct Rexine Printing</h3>
             <p className="text-xs text-gray-500 leading-relaxed">
-              Heavy canvas flex is printed with sun-resistant inks and tailored for a crease-free fit.
+              Premium auto-grade rexine material is printed directly using weatherproof inks, then tailored for a crease-free fit.
             </p>
           </div>
           <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:bg-white hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300">
             <span className="text-xs font-bold text-primary bg-mint px-2.5 py-1 rounded-full">Step 3</span>
-            <h3 className="text-sm font-bold text-gray-900 mt-4 mb-2">Driver Mount</h3>
+            <h3 className="text-sm font-bold text-gray-900 mt-4 mb-2">Hood Replacement</h3>
             <p className="text-xs text-gray-500 leading-relaxed">
-              We collaborate with stands to mount the tops, supplying photographic proof of deployment.
+              Our crew replaces the original auto hood cover entirely with the new printed rexine, ensuring a flawless factory look.
             </p>
           </div>
         </div>
