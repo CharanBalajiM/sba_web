@@ -76,9 +76,9 @@ export default function Home() {
 
   const autoTopProjects = [
     {
-      title: "Erode Arts and Science College Promotion",
-      desc: "Rear-view high-visibility Auto Top print displaying institutional admissions copy.",
-      img: "/auto-top-mockup.png",
+      title: "Airtel 5G Plus Campaign",
+      desc: "High-visibility Auto Top branding printed directly onto the black rexine cover.",
+      img: "/auto-top-airtel-mockup.png",
       tag: "Auto Top Branding",
     },
     {
