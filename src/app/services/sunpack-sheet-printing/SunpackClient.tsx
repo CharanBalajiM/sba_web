@@ -238,8 +238,27 @@ export default function SunpackSheetPrinting() {
           </div>
         </div>
 
+        {/* FAQ Schema for AEO/GEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": faqs.map((faq) => ({
+                "@type": "Question",
+                "name": faq.q,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.a,
+                },
+              })),
+            }),
+          }}
+        />
+
         {/* Features H2 */}
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 font-sans">Product Specifications &amp; Features</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 font-sans">What are the specifications and features of Sunpack sheets?</h2>
         <ul className="space-y-4 mb-10">
           {features.map((feat, i) => (
             <li 
@@ -253,7 +272,7 @@ export default function SunpackSheetPrinting() {
         </ul>
 
         {/* FAQs */}
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 font-sans">Frequently Asked Questions</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 font-sans">Answers to your questions about Sunpack sheet printing</h2>
         <div className="space-y-4 mb-12">
           {faqs.map((faq, i) => {
             const isOpen = openFaqIndex === i;

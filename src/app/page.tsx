@@ -570,7 +570,7 @@ export default function Home() {
               Our Core Services
             </h2>
             <p className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 font-sans">
-              Specialized Local Advertising Services
+              What local advertising services do we offer?
             </p>
             <div className="w-12 h-1 bg-gold mx-auto mt-4 rounded-full" />
           </div>
@@ -629,7 +629,7 @@ export default function Home() {
                 Our Work
               </h2>
               <p className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 font-sans">
-                Our Print Showcase
+                See our actual street pole and auto top prints
               </p>
             </div>
             
@@ -823,7 +823,7 @@ export default function Home() {
                 Uncompromising Standards
               </h2>
               <h3 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-6 font-sans leading-tight">
-                Why Businesses Trust Sree Balaji Advertising
+                Why do businesses trust Sree Balaji Advertising for outdoor marketing?
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-8">
                 Since 1999, we have stayed committed to delivering top-quality custom prints. We assist businesses, schools, and hospitals in setting up high-visibility promotions across Tamil Nadu.
@@ -891,7 +891,7 @@ export default function Home() {
               Testimonials
             </h2>
             <p className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 font-sans">
-              What Our Clients Say
+              What do our clients say about our print quality and turnaround time?
             </p>
             <div className="w-12 h-1 bg-gold mx-auto mt-4 rounded-full" />
           </div>
@@ -931,7 +931,7 @@ export default function Home() {
                 Let&apos;s Build Your Project
               </h2>
               <h3 className="text-3xl font-bold text-gray-900 mb-6 font-sans">
-                Request a Print Quote
+                How can you request a print quote or get in touch with us?
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-8">
                 Ready to roll out localized marketing? Drop your specifications and our print consultants will contact you with custom packages.

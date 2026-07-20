@@ -18,7 +18,7 @@ export default function FloatingCTAs() {
           WhatsApp Us
         </span>
         <MessageCircle className="w-6 h-6 fill-white" />
-      </a>
+      </a>  
 
       {/* Direct Call CTA */}
       <a

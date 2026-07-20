@@ -95,6 +95,28 @@ export default function RootLayout({
       "opens": "09:00",
       "closes": "20:00",
     },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Advertising Printing Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sunpack Sheet Printing",
+            "description": "Weatherproof corrugated plastic sheet printing for outdoor street pole advertising, real estate, and school campaigns."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Auto Top Printing",
+            "description": "Mobile transit advertising on durable canvas flex auto-rickshaw hood replacements."
+          }
+        }
+      ]
+    }
   };
 
   return (

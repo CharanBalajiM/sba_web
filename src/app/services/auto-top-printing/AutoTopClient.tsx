@@ -75,8 +75,27 @@ export default function AutoTopPrinting() {
           </div>
         </div>
 
+        {/* FAQ Schema for AEO/GEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": faqs.map((faq) => ({
+                "@type": "Question",
+                "name": faq.q,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.a,
+                },
+              })),
+            }),
+          }}
+        />
+
         {/* Specs */}
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 font-sans">Specifications &amp; Layout Services</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 font-sans">What are the specifications and features of our Auto Top prints?</h2>
         <ul className="space-y-4 mb-10">
           {specs.map((spec, i) => (
             <li key={i} className="flex items-start space-x-3 text-sm text-gray-600 hover:text-gray-950 transition-colors duration-200">
@@ -113,7 +132,7 @@ export default function AutoTopPrinting() {
         </div>
 
         {/* FAQs */}
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 font-sans">Frequently Asked Questions</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 font-sans">Answers to your questions about Auto Top branding</h2>
         <div className="space-y-4 mb-12">
           {faqs.map((faq, i) => {
             const isOpen = openFaqIndex === i;
