@@ -71,7 +71,7 @@ export default function RootLayout({
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Vasuki Street Number 1, opposite to SCS hospital, Erode Fort",
+      "streetAddress": "Sree Balaji Advertising, Vasuki Street Number 1, opposite to SCS hospital, Erode Fort",
       "addressLocality": "Erode",
       "addressRegion": "Tamil Nadu",
       "postalCode": "638001",

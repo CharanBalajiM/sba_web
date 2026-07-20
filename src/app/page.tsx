@@ -975,7 +975,7 @@ export default function Home() {
                       Head Office Address
                     </h4>
                     <p className="text-sm font-semibold text-gray-900 mt-1">
-                      Vasuki Street Number 1, opposite to SCS hospital, Erode Fort, Erode - 638001, Tamil Nadu
+                      Sree Balaji Advertising, Vasuki Street Number 1, opposite to SCS hospital, Erode Fort, Erode - 638001, Tamil Nadu
                     </p>
                   </div>
                 </div>
