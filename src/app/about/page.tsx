@@ -56,12 +56,17 @@ export default function About() {
 
           {/* Graphical element representing heritage */}
           <div 
-            className="bg-emerald-950 rounded-3xl p-10 text-white shadow-xl h-[400px] flex flex-col justify-between relative overflow-hidden animate-scale-up opacity-0"
+            className="bg-emerald-950 rounded-3xl p-10 text-white shadow-xl h-[400px] flex flex-col justify-between relative overflow-hidden animate-scale-up opacity-0 group"
             style={{ animationDelay: "400ms", animationFillMode: "forwards" }}
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-black/80 to-transparent" />
-            <History className="absolute -top-10 -right-10 w-64 h-64 text-white/5 transform -rotate-12" />
-            <span className="text-[10px] font-bold uppercase tracking-widest text-gold bg-white/10 px-3 py-1 rounded-full backdrop-blur-md w-fit">
+            {/* Background Image with blur and overlay */}
+            <div 
+              className="absolute inset-0 bg-cover bg-center filter blur-[4px] scale-105 opacity-40 transition-transform duration-700 group-hover:scale-110"
+              style={{ backgroundImage: `url('/workshop.jpg')` }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-950 via-emerald-950/70 to-transparent" />
+            <History className="absolute -top-10 -right-10 w-64 h-64 text-white/5 transform -rotate-12 z-10" />
+            <span className="text-[10px] font-bold uppercase tracking-widest text-gold bg-white/10 px-3 py-1 rounded-full backdrop-blur-md w-fit z-10">
               Milestone Legacy
             </span>
             <div className="z-10">
