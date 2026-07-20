@@ -61,10 +61,10 @@ export default function About() {
           >
             {/* Background Image with blur and overlay */}
             <div 
-              className="absolute inset-0 bg-cover bg-center filter blur-[4px] scale-105 opacity-40 transition-transform duration-700 group-hover:scale-110"
+              className="absolute inset-0 bg-cover bg-center filter blur-[3px] scale-105 opacity-65 transition-transform duration-700 group-hover:scale-110"
               style={{ backgroundImage: `url('/workshop.jpg')` }}
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-950 via-emerald-950/70 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-950/95 via-emerald-950/50 to-black/10" />
             <History className="absolute -top-10 -right-10 w-64 h-64 text-white/5 transform -rotate-12 z-10" />
             <span className="text-[10px] font-bold uppercase tracking-widest text-gold bg-white/10 px-3 py-1 rounded-full backdrop-blur-md w-fit z-10">
               Milestone Legacy
