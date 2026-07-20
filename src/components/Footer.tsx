@@ -92,9 +92,9 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary-light mt-0.5 shrink-0" />
                 <span>
-                  L362, Periyar Nagar,
+                  7, Nasiya Noor Rd, Erode Fort,
                   <br />
-                  Erode - 638009, Tamil Nadu
+                  Erode - 638011, Tamil Nadu
                 </span>
               </li>
               <li className="flex items-center space-x-3">

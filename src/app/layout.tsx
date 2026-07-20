@@ -71,10 +71,10 @@ export default function RootLayout({
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "L362, Periyar Nagar",
+      "streetAddress": "7, Nasiya Noor Rd, Erode Fort",
       "addressLocality": "Erode",
       "addressRegion": "Tamil Nadu",
-      "postalCode": "638009",
+      "postalCode": "638011",
       "addressCountry": "IN",
     },
     "geo": {

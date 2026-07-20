@@ -975,7 +975,7 @@ export default function Home() {
                       Head Office Address
                     </h4>
                     <p className="text-sm font-semibold text-gray-900 mt-1">
-                      L362, Periyar Nagar, Erode - 638009, Tamil Nadu
+                      7, Nasiya Noor Rd, Erode Fort, Erode - 638011, Tamil Nadu
                     </p>
                   </div>
                 </div>
