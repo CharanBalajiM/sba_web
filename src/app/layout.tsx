@@ -71,16 +71,16 @@ export default function RootLayout({
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "7, Nasiya Noor Rd, Erode Fort",
+      "streetAddress": "Vasuki Street Number 1, opposite to SCS hospital, Erode Fort",
       "addressLocality": "Erode",
       "addressRegion": "Tamil Nadu",
-      "postalCode": "638011",
+      "postalCode": "638001",
       "addressCountry": "IN",
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "11.3382768",
-      "longitude": "77.7171457",
+      "latitude": "11.341000",
+      "longitude": "77.726000",
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",

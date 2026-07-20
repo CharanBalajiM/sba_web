@@ -104,9 +104,9 @@ export default function Contact() {
               <div className="flex items-start space-x-3 text-sm font-semibold text-gray-900">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span>
-                  7, Nasiya Noor Rd, Erode Fort,
+                  Vasuki Street Number 1, opposite to SCS hospital, Erode Fort,
                   <br />
-                  Erode - 638011, Tamil Nadu
+                  Erode - 638001, Tamil Nadu
                 </span>
               </div>
             </div>
