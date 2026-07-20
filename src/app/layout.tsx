@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     canonical: "https://sreebalajiadvertising.co.in",
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/icon.png",
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
   openGraph: {
     title: "Sree Balaji Advertising | Sunpack Sheet & Auto Top Printing Erode",
