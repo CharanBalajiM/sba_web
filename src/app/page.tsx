@@ -186,16 +186,17 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-mint/40 via-white to-white pt-16 pb-12 md:pt-24 md:pb-16 min-h-[90vh] flex flex-col justify-center border-b border-gray-100">
+      <section className="relative overflow-hidden bg-gradient-to-b from-mint/40 via-white to-white pt-6 pb-10 md:pt-12 md:pb-16 flex flex-col justify-center border-b border-gray-100">
         {/* Modern SaaS Grid Pattern Backdrop */}
         <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,rgba(16,185,129,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(16,185,129,0.04)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
         
-        {/* Ambient Glows */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full filter blur-[100px] pointer-events-none -z-10" />
-        <div className="absolute bottom-12 right-1/4 w-96 h-96 bg-mint/30 rounded-full filter blur-[100px] pointer-events-none -z-10" />
+        {/* Vibrant Ambient Glows so glass opacity is clearly visible */}
+        <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-emerald-400/20 rounded-full filter blur-[90px] pointer-events-none -z-10" />
+        <div className="absolute top-10 left-1/4 w-72 h-72 bg-emerald-300/30 rounded-full filter blur-[70px] pointer-events-none -z-10" />
+        <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-teal-300/25 rounded-full filter blur-[80px] pointer-events-none -z-10" />
 
         {/* Desktop Floating Left Card: Sunpack Sheet (lamppost) */}
-        <Link href="/services/sunpack-sheet-printing" className="absolute left-[3%] top-[22%] hidden xl:block w-72 rotate-[-3deg] bg-white border border-gray-100 rounded-3xl p-4 shadow-2xl hover:rotate-0 hover:-translate-y-4 hover:scale-[1.03] hover:shadow-[0_20px_40px_rgba(16,185,129,0.12)] active:scale-[0.97] transition-all duration-500 ease-out z-10 cursor-pointer group">
+        <Link href="/services/sunpack-sheet-printing" className="absolute left-[3%] top-[22%] hidden xl:block w-72 rotate-[-3deg] bg-white/50 backdrop-blur-md border border-white/80 rounded-3xl p-4 shadow-xl hover:rotate-0 hover:-translate-y-4 hover:scale-[1.03] hover:shadow-[0_20px_40px_rgba(16,185,129,0.12)] active:scale-[0.97] transition-all duration-500 ease-out z-10 cursor-pointer group">
           {/* Red Push Pin */}
           <div className="absolute top-[-10px] left-1/2 -translate-x-1/2 z-30 select-none pointer-events-none drop-shadow-[0_4px_3px_rgba(0,0,0,0.15)] group-hover:scale-110 transition-transform duration-300">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -212,7 +213,7 @@ export default function Home() {
             <span className="text-[10px] font-bold text-primary bg-mint px-2 py-0.5 rounded">Sunpack Ads</span>
             <span className="text-[10px] text-gray-400">Street Pole</span>
           </div>
-          <div className="h-44 rounded-2xl overflow-hidden border border-gray-100 bg-gray-50 relative flex items-center justify-center">
+          <div className="h-44 rounded-2xl overflow-hidden border border-white/60 bg-white/40 backdrop-blur-xs relative flex items-center justify-center">
             {/* Pinned Sunpack Board on Lamppost SVG */}
             <svg viewBox="0 0 200 150" className="w-full h-full object-contain" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -262,7 +263,7 @@ export default function Home() {
         </Link>
 
         {/* Desktop Floating Right Card: Auto Top (rexine printing) */}
-        <Link href="/services/auto-top-printing" className="absolute right-[3%] top-[22%] hidden xl:block w-72 rotate-[3deg] bg-white border border-gray-100 rounded-3xl p-4 shadow-2xl hover:rotate-0 hover:-translate-y-4 hover:scale-[1.03] hover:shadow-[0_20px_40px_rgba(16,185,129,0.12)] active:scale-[0.97] transition-all duration-500 ease-out z-10 cursor-pointer group">
+        <Link href="/services/auto-top-printing" className="absolute right-[3%] top-[22%] hidden xl:block w-72 rotate-[3deg] bg-white/50 backdrop-blur-md border border-white/80 rounded-3xl p-4 shadow-xl hover:rotate-0 hover:-translate-y-4 hover:scale-[1.03] hover:shadow-[0_20px_40px_rgba(16,185,129,0.12)] active:scale-[0.97] transition-all duration-500 ease-out z-10 cursor-pointer group">
           {/* Red Push Pin */}
           <div className="absolute top-[-10px] left-1/2 -translate-x-1/2 z-30 select-none pointer-events-none drop-shadow-[0_4px_3px_rgba(0,0,0,0.15)] group-hover:scale-110 transition-transform duration-300">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -279,7 +280,7 @@ export default function Home() {
             <span className="text-[10px] font-bold text-primary bg-mint px-2 py-0.5 rounded">Auto Top</span>
             <span className="text-[10px] text-gray-400">Canopy Rexine</span>
           </div>
-          <div className="h-44 rounded-2xl overflow-hidden border border-gray-100 bg-gray-50 relative flex items-center justify-center">
+          <div className="h-44 rounded-2xl overflow-hidden border border-white/60 bg-white/40 backdrop-blur-xs relative flex items-center justify-center">
             {/* Detailed Auto Rickshaw Back View SVG */}
             <svg viewBox="0 0 200 150" className="w-full h-full object-contain" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -359,8 +360,8 @@ export default function Home() {
         </Link>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
-          {/* Centralized Text Content */}
-          <div className="text-center max-w-3xl mx-auto">
+          {/* Centralized Text Content with Subtle Glassmorphism Card */}
+          <div className="text-center max-w-3xl mx-auto bg-white/60 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all">
             {/* Trust Badge */}
             <div className="inline-flex items-center space-x-2 bg-mint border border-primary/10 rounded-full px-4.5 py-1.5 mb-6 hover:bg-emerald-100/50 transition-colors animate-fade-in-down">
               <Award className="w-4 h-4 text-primary" />
@@ -383,26 +384,6 @@ export default function Home() {
               and custom Auto Tops tailored for **schools, colleges, and educational institutions**.
             </p>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-              <Link
-                href="/contact"
-                className="flex items-center justify-center space-x-2 bg-primary text-white hover:bg-primary-light px-8 py-4 rounded-full text-base font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.97] transition-all duration-300 w-full sm:w-auto group"
-              >
-                <span>Get Quote</span>
-                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-              <a
-                href="https://wa.me/919345632103?text=Hi%20Sree%20Balaji%20Advertising%2C%20I'm%20interested%20in%20your%20printing%20services."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center space-x-2 bg-white text-gray-700 hover:text-primary border border-gray-200 hover:border-primary/20 px-8 py-4 rounded-full text-base font-semibold shadow-sm hover:shadow hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.97] transition-all duration-300 w-full sm:w-auto group"
-              >
-                <MessageSquare className="w-5 h-5 text-emerald-500 fill-emerald-50 hover-bounce" />
-                <span>Chat on WhatsApp</span>
-              </a>
-            </div>
-
             {/* Statistics Row */}
             <div 
               className="mt-2 mb-8 w-full animate-scale-up opacity-0"
@@ -422,15 +403,35 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Mobile/Tablet Only: Showcase cards stacked below CTAs */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6 xl:hidden max-w-2xl mx-auto text-left">
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+              <Link
+                href="/contact"
+                className="flex items-center justify-center space-x-2 bg-primary text-white hover:bg-primary-light px-8 py-4 rounded-full text-base font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.97] transition-all duration-300 w-full sm:w-auto group"
+              >
+                <span>Get Quote</span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+              <a
+                href="https://wa.me/919345632103?text=Hi%20Sree%20Balaji%20Advertising%2C%20I'm%20interested%20in%20your%20printing%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center space-x-2 bg-white text-gray-700 hover:text-primary border border-gray-200 hover:border-primary/20 px-8 py-4 rounded-full text-base font-semibold shadow-sm hover:shadow hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.97] transition-all duration-300 w-full sm:w-auto group"
+              >
+                <MessageSquare className="w-5 h-5 text-emerald-500 fill-emerald-50 hover-bounce" />
+                <span>Chat on WhatsApp</span>
+              </a>
+            </div>
+
+            {/* Mobile/Tablet Only: Showcase cards side-by-side below CTAs */}
+            <div className="grid grid-cols-2 gap-3 sm:gap-6 mt-6 xl:hidden max-w-2xl mx-auto text-left">
               {/* Sunpack Sheet Card */}
-              <Link href="/services/sunpack-sheet-printing" className="bg-white border border-gray-100 rounded-3xl p-5 shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer block">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-[10px] font-bold text-primary bg-mint px-2 py-0.5 rounded">Sunpack Ads</span>
-                  <p className="text-xs text-gray-500">Tied with eyelets to street poles</p>
+              <Link href="/services/sunpack-sheet-printing" className="bg-emerald-50/60 backdrop-blur-md border border-emerald-100/80 rounded-2xl sm:rounded-3xl p-3 sm:p-5 shadow-xs hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer block">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2 sm:mb-3 gap-1">
+                  <span className="text-[9px] sm:text-[10px] font-bold text-primary bg-white/80 px-2 py-0.5 rounded w-fit border border-primary/10">Sunpack Ads</span>
+                  <p className="text-[10px] sm:text-xs text-gray-500 line-clamp-1">Tied to street poles</p>
                 </div>
-                <div className="h-32 rounded-xl overflow-hidden border border-gray-100 bg-gray-50 relative flex items-center justify-center">
+                <div className="h-28 sm:h-32 rounded-xl overflow-hidden border border-emerald-200/40 bg-white/60 backdrop-blur-xs relative flex items-center justify-center">
                   {/* Sunpack Board on Lamppost Svg */}
                   <svg viewBox="0 0 200 150" className="w-full h-full object-contain" xmlns="http://www.w3.org/2000/svg">
                     <defs>
@@ -472,12 +473,12 @@ export default function Home() {
               </Link>
 
               {/* Auto Top Card */}
-              <Link href="/services/auto-top-printing" className="bg-white border border-gray-100 rounded-3xl p-5 shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer block">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-[10px] font-bold text-primary bg-mint px-2 py-0.5 rounded">Auto Top</span>
-                  <p className="text-xs text-gray-500">Printed directly on rexine canopy</p>
+              <Link href="/services/auto-top-printing" className="bg-emerald-50/60 backdrop-blur-md border border-emerald-100/80 rounded-2xl sm:rounded-3xl p-3 sm:p-5 shadow-xs hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer block">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2 sm:mb-3 gap-1">
+                  <span className="text-[9px] sm:text-[10px] font-bold text-primary bg-white/80 px-2 py-0.5 rounded w-fit border border-primary/10">Auto Top</span>
+                  <p className="text-[10px] sm:text-xs text-gray-500 line-clamp-1">Printed on rexine</p>
                 </div>
-                <div className="h-32 rounded-xl overflow-hidden border border-gray-100 bg-gray-50 relative flex items-center justify-center">
+                <div className="h-28 sm:h-32 rounded-xl overflow-hidden border border-emerald-200/40 bg-white/60 backdrop-blur-xs relative flex items-center justify-center">
                   {/* Auto Rickshaw Svg */}
                   <svg viewBox="0 0 200 150" className="w-full h-full object-contain" xmlns="http://www.w3.org/2000/svg">
                     <defs>
@@ -634,7 +635,7 @@ export default function Home() {
             </div>
             
             {/* Filter Toggle Buttons */}
-            <div className="flex gap-2 mt-6 md:mt-0 bg-white p-1.5 rounded-full border border-gray-200 shadow-sm shrink-0 relative">
+            <div className="flex gap-2 mt-6 md:mt-0 bg-white p-1.5 rounded-full border border-gray-200 shadow-sm shrink-0 relative mx-auto md:mx-0">
               <button
                 onClick={() => setShowcaseTab("sunpack")}
                 className={`px-6 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all cursor-pointer relative z-10 ${
@@ -750,27 +751,31 @@ export default function Home() {
                 })}
               </div>
 
-              {/* Split Screen Showcase Block */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6 text-left">
+              {/* Split Screen Showcase Block (Side-by-side on mobile & desktop) */}
+              <div className="grid grid-cols-2 gap-3 sm:gap-6 mt-6 text-left">
                 {/* Dimensions & Proportions Guide */}
-                <div className="bg-white border border-gray-100 rounded-3xl p-6 flex flex-col justify-between">
+                <div className="bg-white border border-gray-100 rounded-3xl p-4 sm:p-6 flex flex-col justify-between">
                   <div>
                     <span className="text-[10px] font-bold text-primary bg-mint px-2.5 py-1 rounded-md uppercase tracking-wider">
                       {currentSizeObj.popularity}
                     </span>
-                    <h3 className="text-xl font-extrabold text-gray-900 mt-3 mb-2">
+                    <h3 className="text-base sm:text-xl font-extrabold text-gray-900 mt-2 sm:mt-3 mb-1.5 sm:mb-2">
                       {currentSizeObj.dimensions} Layout Format
                     </h3>
-                    <p className="text-xs text-gray-500 leading-relaxed mb-6">{currentSizeObj.useCase}</p>
+                    <p className="text-[11px] sm:text-xs text-gray-500 leading-relaxed mb-4 sm:mb-6">{currentSizeObj.useCase}</p>
                   </div>
 
                   {/* Visual proportions mockup */}
-                  <div className="w-full h-56 bg-mint rounded-2xl border border-primary/10 flex items-center justify-center relative overflow-hidden">
+                  <div className="w-full h-48 sm:h-56 bg-mint rounded-2xl border border-primary/10 flex items-center justify-center relative overflow-hidden p-3">
                     <div 
                       className="border border-dashed border-primary/40 rounded-xl flex items-center justify-center text-center shadow-inner transition-all duration-500 ease-out bg-white/50"
-                      style={{ width: `${currentSizeObj.width}px`, height: `${currentSizeObj.height}px` }}
+                      style={{ 
+                        height: `min(${currentSizeObj.height * 0.85}px, 160px)`,
+                        aspectRatio: `${currentSizeObj.width} / ${currentSizeObj.height}`,
+                        maxWidth: '100%',
+                      }}
                     >
-                      <span className="text-[10px] font-bold text-primary font-mono p-1">
+                      <span className="text-[10px] font-bold text-primary font-mono p-1 whitespace-nowrap">
                         {currentSizeObj.dimensions}
                       </span>
                     </div>
@@ -778,15 +783,15 @@ export default function Home() {
                 </div>
 
                 {/* Real-world Preview Mockup Card */}
-                <div className="bg-white border border-gray-100 rounded-3xl p-6 flex flex-col justify-between hover:shadow-md transition-shadow duration-300">
+                <div className="bg-white border border-gray-100 rounded-3xl p-4 sm:p-6 flex flex-col justify-between hover:shadow-md transition-shadow duration-300">
                   <div>
                     <span className="text-[10px] font-bold text-gold bg-amber-50 border border-gold/10 px-2.5 py-1 rounded-md uppercase tracking-wider">
                       Preview in Action
                     </span>
-                    <h3 className="text-xl font-extrabold text-gray-900 mt-3 mb-2">
+                    <h3 className="text-base sm:text-xl font-extrabold text-gray-900 mt-2 sm:mt-3 mb-1.5 sm:mb-2">
                       Real-world Installation
                     </h3>
-                    <p className="text-xs text-gray-500 leading-relaxed mb-6">
+                    <p className="text-[11px] sm:text-xs text-gray-500 leading-relaxed mb-4 sm:mb-6">
                       Simulated preview of a printed board tied securely to a street lamppost.
                     </p>
                   </div>
@@ -794,12 +799,12 @@ export default function Home() {
                   {/* Preview image window */}
                   <div 
                     key={selectedSize}
-                    className="w-full h-64 rounded-2xl border border-gray-100 overflow-hidden bg-contain bg-no-repeat bg-gray-50 bg-center relative shadow-sm animate-scale-up"
+                    className="w-full h-44 sm:h-64 rounded-2xl border border-gray-100 overflow-hidden bg-contain bg-no-repeat bg-gray-50 bg-center relative shadow-sm animate-scale-up"
                     style={{ backgroundImage: `url(${currentSizeObj.img})` }}
                   >
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-gold bg-black/45 px-2.5 py-1 rounded-md backdrop-blur-xs">
+                    <div className="absolute bottom-3 left-3 text-white">
+                      <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-gold bg-black/45 px-2 py-0.5 sm:py-1 rounded-md backdrop-blur-xs">
                         {currentSizeObj.dimensions} Board
                       </span>
                     </div>

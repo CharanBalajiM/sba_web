@@ -48,7 +48,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo / Brand Name */}
           <Link href="/" className="flex items-center space-x-3 group">
             <img 
@@ -165,13 +165,30 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Right Actions: Get Quote + Hamburger Toggle */}
+          <div className="flex md:hidden items-center space-x-2">
+            <a
+              href="https://wa.me/919345632103?text=Hi%20Sree%20Balaji%20Advertising%2C%20I'm%20interested%20in%20your%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-1.5 text-xs font-semibold text-primary px-3.5 py-2 rounded-full transition-all duration-300 relative overflow-hidden group glass-button-green hover:-translate-y-[1px] active:scale-[0.97]"
+            >
+              <RippleEffect color="rgba(15, 61, 36, 0.2)" />
+              {/* Looping White Glass Shimmer Overlay */}
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent pointer-events-none animate-shimmer-loop" />
+              <MessageSquare className="w-3.5 h-3.5 text-primary/80 relative z-10 hover-bounce" />
+              <span className="relative z-10 whitespace-nowrap">Get Quote</span>
+            </a>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors"
+              aria-label="Toggle Menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
