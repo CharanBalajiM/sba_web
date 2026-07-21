@@ -267,26 +267,26 @@ export default function Services() {
                 transition={{ duration: 0.2 }}
               >
                 {/* Centered Size Filter Buttons in 4 and 2 Layout */}
-                <div className="flex flex-col items-center gap-1.5 sm:gap-2 mb-8">
-                  {/* Row 1: 4 buttons */}
-                  <div className="flex flex-wrap justify-center gap-2.5 sm:gap-4">
+                <div className="flex flex-col items-center gap-1.5 sm:gap-2 mb-8 w-full">
+                  {/* Row 1: 4 buttons on all screen sizes */}
+                  <div className="grid grid-cols-4 gap-1.5 sm:gap-3 w-full max-w-lg mx-auto">
                     {sunpackSizes.slice(0, 4).map((s) => {
                       const isPopular = s.id === "size2_5" || s.id === "size3";
                       return (
                         <div key={s.id} className="relative mt-2.5">
                           {isPopular && (
-                            <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-[8px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow-md tracking-wider z-10 flex items-center space-x-1.5 whitespace-nowrap border border-white animate-pulse-gentle overflow-hidden">
+                            <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-[7px] sm:text-[8px] font-extrabold uppercase px-1.5 sm:px-2.5 py-0.5 rounded-full shadow-md tracking-wider z-10 flex items-center space-x-1 whitespace-nowrap border border-white animate-pulse-gentle overflow-hidden">
                               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-shimmer-sweep" />
-                              <span className="relative flex h-1.5 w-1.5">
+                              <span className="relative flex h-1 w-1 sm:h-1.5 sm:w-1.5">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
+                                <span className="relative inline-flex rounded-full h-1 w-1 sm:h-1.5 sm:w-1.5 bg-white"></span>
                               </span>
                               <span className="relative z-10">Popular</span>
                             </span>
                           )}
                           <button
                             onClick={() => setSelectedSize(s.id)}
-                            className={`px-3.5 sm:px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 relative overflow-hidden ${
+                            className={`w-full px-1 sm:px-4 py-2.5 rounded-xl text-[11px] sm:text-xs font-bold transition-all duration-300 relative overflow-hidden text-center ${
                               selectedSize === s.id
                                 ? "bg-primary text-white shadow-md scale-105"
                                 : "bg-white text-gray-600 border border-gray-100 hover:bg-gray-100 hover:scale-[1.02]"
@@ -300,14 +300,14 @@ export default function Services() {
                     })}
                   </div>
 
-                  {/* Row 2: 2 buttons */}
-                  <div className="flex flex-wrap justify-center gap-2.5 sm:gap-4">
+                  {/* Row 2: 2 buttons centered on all screen sizes */}
+                  <div className="grid grid-cols-2 gap-1.5 sm:gap-3 w-[50%] max-w-[240px] sm:max-w-[280px] mx-auto">
                     {sunpackSizes.slice(4, 6).map((s) => {
                       return (
                         <div key={s.id} className="relative mt-2.5">
                           <button
                             onClick={() => setSelectedSize(s.id)}
-                            className={`px-3.5 sm:px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 relative overflow-hidden ${
+                            className={`w-full px-1 sm:px-4 py-2.5 rounded-xl text-[11px] sm:text-xs font-bold transition-all duration-300 relative overflow-hidden text-center ${
                               selectedSize === s.id
                                 ? "bg-primary text-white shadow-md scale-105"
                                 : "bg-white text-gray-600 border border-gray-100 hover:bg-gray-100 hover:scale-[1.02]"
