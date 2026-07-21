@@ -720,35 +720,59 @@ export default function Home() {
                 transition={{ duration: 0.2 }}
                 className="max-w-6xl mx-auto"
               >
-              <div className="flex flex-wrap justify-center gap-4 mb-8">
-                {sunpackSizes.map((s) => {
-                  const isPopular = s.id === "size2_5" || s.id === "size3";
-                  return (
-                    <div key={s.id} className="relative mt-2.5">
-                      {isPopular && (
-                        <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-[8px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow-md tracking-wider z-10 flex items-center space-x-1.5 whitespace-nowrap border border-white animate-pulse-gentle overflow-hidden">
-                          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-shimmer-sweep" />
-                          <span className="relative flex h-1.5 w-1.5">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
+              <div className="flex flex-col items-center gap-1.5 sm:gap-2 mb-8">
+                {/* Row 1: 4 buttons */}
+                <div className="flex flex-wrap justify-center gap-2.5 sm:gap-4">
+                  {sunpackSizes.slice(0, 4).map((s) => {
+                    const isPopular = s.id === "size2_5" || s.id === "size3";
+                    return (
+                      <div key={s.id} className="relative mt-2.5">
+                        {isPopular && (
+                          <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-[8px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow-md tracking-wider z-10 flex items-center space-x-1.5 whitespace-nowrap border border-white animate-pulse-gentle overflow-hidden">
+                            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-shimmer-sweep" />
+                            <span className="relative flex h-1.5 w-1.5">
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
+                            </span>
+                            <span className="relative z-10">Popular</span>
                           </span>
-                          <span className="relative z-10">Popular</span>
-                        </span>
-                      )}
-                      <button
-                        onClick={() => setSelectedSize(s.id)}
-                        className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 relative overflow-hidden ${
-                          selectedSize === s.id
-                            ? "bg-primary text-white shadow-md scale-105"
-                            : "bg-white text-gray-600 border border-gray-100 hover:bg-gray-100 hover:scale-[1.02]"
-                        } ${isPopular ? "border-amber-400 shadow-[0_0_8px_rgba(245,158,11,0.25)]" : ""}`}
-                      >
-                        <RippleEffect color={selectedSize === s.id ? "rgba(255, 255, 255, 0.65)" : "rgba(15, 61, 36, 0.25)"} />
-                        <span className="relative z-10">{s.dimensions}</span>
-                      </button>
-                    </div>
-                  );
-                })}
+                        )}
+                        <button
+                          onClick={() => setSelectedSize(s.id)}
+                          className={`px-3.5 sm:px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 relative overflow-hidden ${
+                            selectedSize === s.id
+                              ? "bg-primary text-white shadow-md scale-105"
+                              : "bg-white text-gray-600 border border-gray-100 hover:bg-gray-100 hover:scale-[1.02]"
+                          } ${isPopular ? "border-amber-400 shadow-[0_0_8px_rgba(245,158,11,0.25)]" : ""}`}
+                        >
+                          <RippleEffect color={selectedSize === s.id ? "rgba(255, 255, 255, 0.65)" : "rgba(15, 61, 36, 0.25)"} />
+                          <span className="relative z-10">{s.dimensions}</span>
+                        </button>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Row 2: 2 buttons */}
+                <div className="flex flex-wrap justify-center gap-2.5 sm:gap-4">
+                  {sunpackSizes.slice(4, 6).map((s) => {
+                    return (
+                      <div key={s.id} className="relative mt-2.5">
+                        <button
+                          onClick={() => setSelectedSize(s.id)}
+                          className={`px-3.5 sm:px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 relative overflow-hidden ${
+                            selectedSize === s.id
+                              ? "bg-primary text-white shadow-md scale-105"
+                              : "bg-white text-gray-600 border border-gray-100 hover:bg-gray-100 hover:scale-[1.02]"
+                          }`}
+                        >
+                          <RippleEffect color={selectedSize === s.id ? "rgba(255, 255, 255, 0.65)" : "rgba(15, 61, 36, 0.25)"} />
+                          <span className="relative z-10">{s.dimensions}</span>
+                        </button>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
 
               {/* Split Screen Showcase Block (Side-by-side on mobile & desktop) */}

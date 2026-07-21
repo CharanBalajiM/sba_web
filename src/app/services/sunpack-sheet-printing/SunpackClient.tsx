@@ -149,58 +149,87 @@ export default function SunpackSheetPrinting() {
           </div>
           <p className="text-xs text-gray-500 mb-6">Click on any size tab below to view standard specifications and recommended use cases:</p>
 
-          <div className="flex flex-wrap gap-4 mb-6">
-            {sizes.map((s) => {
-              const isPopular = s.id === "size2_5" || s.id === "size3";
-              return (
-                <div key={s.id} className="relative mt-2.5">
-                      {isPopular && (
-                        <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-[8px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow-md tracking-wider z-10 flex items-center space-x-1.5 whitespace-nowrap border border-white animate-pulse-gentle overflow-hidden">
-                          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-shimmer-sweep" />
-                          <span className="relative flex h-1.5 w-1.5">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
-                          </span>
-                          <span className="relative z-10">Popular</span>
+          <div className="flex flex-col items-center gap-1.5 sm:gap-2 mb-8">
+            {/* Row 1: 4 buttons */}
+            <div className="flex flex-wrap justify-center gap-2.5 sm:gap-4">
+              {sizes.slice(0, 4).map((s) => {
+                const isPopular = s.id === "size2_5" || s.id === "size3";
+                return (
+                  <div key={s.id} className="relative mt-2.5">
+                    {isPopular && (
+                      <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-[8px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow-md tracking-wider z-10 flex items-center space-x-1.5 whitespace-nowrap border border-white animate-pulse-gentle overflow-hidden">
+                        <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-shimmer-sweep" />
+                        <span className="relative flex h-1.5 w-1.5">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
                         </span>
-                      )}
-                  <button
-                    onClick={() => setSelectedSize(s.id)}
-                    className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 relative overflow-hidden ${
-                      selectedSize === s.id
-                        ? "bg-primary text-white shadow-md scale-105"
-                        : "bg-white text-gray-600 border border-gray-100 hover:bg-gray-100 hover:scale-[1.02]"
-                    } ${isPopular ? "border-amber-400 shadow-[0_0_8px_rgba(245,158,11,0.25)]" : ""}`}
-                  >
-                    <RippleEffect color={selectedSize === s.id ? "rgba(255, 255, 255, 0.65)" : "rgba(15, 61, 36, 0.25)"} />
-                    <span className="relative z-10">{s.dimensions}</span>
-                  </button>
-                </div>
-              );
-            })}
+                        <span className="relative z-10">Popular</span>
+                      </span>
+                    )}
+                    <button
+                      onClick={() => setSelectedSize(s.id)}
+                      className={`px-3.5 sm:px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 relative overflow-hidden ${
+                        selectedSize === s.id
+                          ? "bg-primary text-white shadow-md scale-105"
+                          : "bg-white text-gray-600 border border-gray-100 hover:bg-gray-100 hover:scale-[1.02]"
+                      } ${isPopular ? "border-amber-400 shadow-[0_0_8px_rgba(245,158,11,0.25)]" : ""}`}
+                    >
+                      <RippleEffect color={selectedSize === s.id ? "rgba(255, 255, 255, 0.65)" : "rgba(15, 61, 36, 0.25)"} />
+                      <span className="relative z-10">{s.dimensions}</span>
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Row 2: 2 buttons */}
+            <div className="flex flex-wrap justify-center gap-2.5 sm:gap-4">
+              {sizes.slice(4, 6).map((s) => {
+                const isPopular = s.id === "size2_5" || s.id === "size3";
+                return (
+                  <div key={s.id} className="relative mt-2.5">
+                    <button
+                      onClick={() => setSelectedSize(s.id)}
+                      className={`px-3.5 sm:px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 relative overflow-hidden ${
+                        selectedSize === s.id
+                          ? "bg-primary text-white shadow-md scale-105"
+                          : "bg-white text-gray-600 border border-gray-100 hover:bg-gray-100 hover:scale-[1.02]"
+                      }`}
+                    >
+                      <RippleEffect color={selectedSize === s.id ? "rgba(255, 255, 255, 0.65)" : "rgba(15, 61, 36, 0.25)"} />
+                      <span className="relative z-10">{s.dimensions}</span>
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
-          {/* Size details block */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6">
+          {/* Split Screen Showcase Block (Side-by-side on mobile & desktop) */}
+          <div className="grid grid-cols-2 gap-3 sm:gap-6 mt-6 text-left">
             {/* Dimensions & Proportions Guide */}
-            <div className="bg-white border border-gray-100 rounded-3xl p-6 flex flex-col justify-between hover:shadow-md transition-shadow duration-300">
+            <div className="bg-white border border-gray-100 rounded-3xl p-4 sm:p-6 flex flex-col justify-between hover:shadow-md transition-shadow duration-300">
               <div>
                 <span className="text-[10px] font-bold text-primary bg-mint px-2.5 py-1 rounded-md uppercase tracking-wider">
                   {currentSizeObj.popularity}
                 </span>
-                <h3 className="text-xl font-extrabold text-gray-900 mt-3 mb-2">
+                <h3 className="text-base sm:text-xl font-extrabold text-gray-900 mt-2 sm:mt-3 mb-1.5 sm:mb-2">
                   {currentSizeObj.dimensions} Layout Format
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed mb-6">{currentSizeObj.useCase}</p>
+                <p className="text-[11px] sm:text-xs text-gray-500 leading-relaxed mb-4 sm:mb-6">{currentSizeObj.useCase}</p>
               </div>
 
               {/* Visual proportions mockup */}
-              <div className="w-full h-56 bg-mint rounded-2xl border border-primary/10 flex items-center justify-center relative overflow-hidden">
+              <div className="w-full h-48 sm:h-56 bg-mint rounded-2xl border border-primary/10 flex items-center justify-center relative overflow-hidden p-3">
                 <div 
                   className="border border-dashed border-primary/40 rounded-xl flex items-center justify-center text-center shadow-inner transition-all duration-500 ease-out bg-white/50"
-                  style={{ width: `${currentSizeObj.width}px`, height: `${currentSizeObj.height}px` }}
+                  style={{ 
+                    height: `min(${currentSizeObj.height * 0.85}px, 160px)`,
+                    aspectRatio: `${currentSizeObj.width} / ${currentSizeObj.height}`,
+                    maxWidth: '100%',
+                  }}
                 >
-                  <span className="text-[10px] font-bold text-primary font-mono p-1">
+                  <span className="text-[10px] font-bold text-primary font-mono p-1 whitespace-nowrap">
                     {currentSizeObj.dimensions}
                   </span>
                 </div>
@@ -208,15 +237,15 @@ export default function SunpackSheetPrinting() {
             </div>
 
             {/* Real-world Preview Mockup Card */}
-            <div className="bg-white border border-gray-100 rounded-3xl p-6 flex flex-col justify-between hover:shadow-md transition-shadow duration-300">
+            <div className="bg-white border border-gray-100 rounded-3xl p-4 sm:p-6 flex flex-col justify-between hover:shadow-md transition-shadow duration-300">
               <div>
                 <span className="text-[10px] font-bold text-gold bg-amber-50 border border-gold/10 px-2.5 py-1 rounded-md uppercase tracking-wider">
                   Preview in Action
                 </span>
-                <h3 className="text-xl font-extrabold text-gray-900 mt-3 mb-2">
+                <h3 className="text-base sm:text-xl font-extrabold text-gray-900 mt-2 sm:mt-3 mb-1.5 sm:mb-2">
                   Real-world Installation
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed mb-6">
+                <p className="text-[11px] sm:text-xs text-gray-500 leading-relaxed mb-4 sm:mb-6">
                   Simulated preview of a printed board tied securely to a street lamppost.
                 </p>
               </div>
@@ -224,12 +253,12 @@ export default function SunpackSheetPrinting() {
               {/* Preview image window */}
               <div 
                 key={selectedSize}
-                className="w-full h-64 rounded-2xl border border-gray-100 overflow-hidden bg-contain bg-no-repeat bg-gray-50 bg-center relative shadow-sm animate-scale-up"
+                className="w-full h-44 sm:h-64 rounded-2xl border border-gray-100 overflow-hidden bg-contain bg-no-repeat bg-gray-50 bg-center relative shadow-sm animate-scale-up"
                 style={{ backgroundImage: `url(${currentSizeObj.img})` }}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-gold bg-black/45 px-2.5 py-1 rounded-md backdrop-blur-xs">
+                <div className="absolute bottom-3 left-3 text-white">
+                  <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-gold bg-black/45 px-2 py-0.5 sm:py-1 rounded-md backdrop-blur-xs">
                     {currentSizeObj.dimensions} Board
                   </span>
                 </div>
